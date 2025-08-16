@@ -5,10 +5,11 @@
   
   *Advanced database playground with AI-powered query generation, inline results, and multi-database support*
   
-  [![VS Code Version](https://img.shields.io/badge/VS%20Code-1.74.0+-blue.svg)](https://code.visualstudio.com/)
+  [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=mzainulabideen.live-database-playground)
+  [![Version](https://img.shields.io/badge/version-0.1.4-blue.svg)](https://marketplace.visualstudio.com/items?itemName=mzainulabideen.live-database-playground)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-  [![Database Support](https://img.shields.io/badge/Databases-4%20Supported-brightgreen.svg)](#-multi-database-support)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-91.3%25-blue?logo=typescript)](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention)
+  [![GitHub Stars](https://img.shields.io/github/stars/ZainulabdeenOfficial/Live_Database_VSCode_Extention?style=social)](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention)
 </div>
 
 ## 🚀 Features
@@ -46,8 +47,8 @@ SELECT * FROM users WHERE status = 'active';
 
 ### From Source
 ```bash
-git clone https://github.com/your-repo/live-database-playground
-cd live-database-playground
+git clone https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention.git
+cd Live_Database_VSCode_Extention
 npm install
 npm run compile
 ```
@@ -151,8 +152,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ### Development Setup
 ```bash
-git clone https://github.com/your-repo/live-database-playground
-cd live-database-playground
+git clone https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention.git
+cd Live_Database_VSCode_Extention
 npm install
 npm run watch
 ```
@@ -162,6 +163,21 @@ npm run watch
 npm test
 npm run lint
 ```
+
+## 📁 Repository
+
+**GitHub Repository:** [https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention)
+
+### 📊 Repository Stats
+- **Language:** TypeScript (91.3%), JavaScript (8.7%)
+- **Stars:** [![GitHub Stars](https://img.shields.io/github/stars/ZainulabdeenOfficial/Live_Database_VSCode_Extention?style=social)](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention)
+- **Forks:** [![GitHub Forks](https://img.shields.io/github/forks/ZainulabdeenOfficial/Live_Database_VSCode_Extention?style=social)](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention)
+- **Issues:** [![GitHub Issues](https://img.shields.io/github/issues/ZainulabdeenOfficial/Live_Database_VSCode_Extention)](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention/issues)
+
+### 🔗 Quick Links
+- **VS Code Marketplace:** [Live Database Playground](https://marketplace.visualstudio.com/items?itemName=mzainulabideen.live-database-playground)
+- **Publisher:** [mzainulabideen](https://marketplace.visualstudio.com/publishers/mzainulabideen)
+- **Documentation:** [README.md](README.md)
 
 ## 📄 License
 

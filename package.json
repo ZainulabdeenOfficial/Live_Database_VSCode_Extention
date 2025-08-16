@@ -2,11 +2,15 @@
   "name": "live-database-playground",
   "displayName": "Live Database Playground",
   "description": "🚀 Transform VS Code into a powerful database playground with AI-powered query generation, inline results, and multi-database support. Write natural language queries, execute them instantly, and explore your database schema with intelligent assistance.",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "icon": "resources/logo.png",
+  "galleryBanner": {
+    "color": "#667eea",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZainulabdeenOfficial/live-database-playground.git"
+    "url": "https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention.git"
   },
   "publisher": "mzainulabideen",
   "engines": {
