@@ -1,3 +1,7 @@
+![Live Database VS Code Extension Banner](https://github.com/ZainulabdeenOfficial/Live_Database_VSCode_Extention/blob/main/Logo%20Extention.png?raw=true)
+
+
+
 # 🎯 Live Database Playground
 
 <div align="center">
