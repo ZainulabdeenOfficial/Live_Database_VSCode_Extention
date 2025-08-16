@@ -1,0 +1,20 @@
+# PNG Logo Placeholder
+# 
+# This is a placeholder for the logo.png file.
+# To create the actual PNG logo:
+#
+# 1. Open the SVG file: resources/logo.svg
+# 2. Use an online converter like:
+#    - https://convertio.co/svg-png/
+#    - https://cloudconvert.com/svg-to-png/
+#    - https://www.svgviewer.dev/
+# 3. Convert to 128x128 PNG
+# 4. Save as resources/logo.png
+#
+# The SVG contains:
+# - Modern gradient background
+# - Database cylinder with data lines
+# - AI neural network representation
+# - Code brackets
+# - Animated particles
+# - Professional color scheme

@@ -1,0 +1,93 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="playGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- Database Cylinder -->
+  <g transform="translate(32, 20)">
+    <!-- Database Base -->
+    <ellipse cx="32" cy="68" rx="28" ry="8" fill="url(#dbGradient)" opacity="0.8"/>
+    
+    <!-- Database Body -->
+    <path d="M4 20 L4 60 Q4 68 12 68 L52 68 Q60 68 60 60 L60 20 Q60 12 52 12 L12 12 Q4 12 4 20 Z" 
+          fill="url(#dbGradient)" opacity="0.9"/>
+    
+    <!-- Database Lines (Data) -->
+    <line x1="12" y1="25" x2="52" y2="25" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="12" y1="32" x2="52" y2="32" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="12" y1="39" x2="52" y2="39" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="12" y1="46" x2="52" y2="46" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="12" y1="53" x2="52" y2="53" stroke="white" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Database Connection Points -->
+    <circle cx="32" cy="15" r="2" fill="white" opacity="0.8"/>
+    <circle cx="32" cy="62" r="2" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Playground Elements -->
+  <g transform="translate(70, 70)">
+    <!-- Code Brackets -->
+    <path d="M8 8 L16 16 L8 24 M24 8 L16 16 L24 24" 
+          stroke="url(#playGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- AI Brain/Neural Network -->
+    <g transform="translate(35, 10)">
+      <!-- Neural Network Nodes -->
+      <circle cx="0" cy="0" r="3" fill="url(#playGradient)" opacity="0.9"/>
+      <circle cx="8" cy="8" r="2" fill="url(#playGradient)" opacity="0.7"/>
+      <circle cx="8" cy="0" r="2" fill="url(#playGradient)" opacity="0.7"/>
+      <circle cx="8" cy="-8" r="2" fill="url(#playGradient)" opacity="0.7"/>
+      <circle cx="16" cy="12" r="2" fill="url(#playGradient)" opacity="0.6"/>
+      <circle cx="16" cy="4" r="2" fill="url(#playGradient)" opacity="0.6"/>
+      <circle cx="16" cy="-4" r="2" fill="url(#playGradient)" opacity="0.6"/>
+      <circle cx="16" cy="-12" r="2" fill="url(#playGradient)" opacity="0.6"/>
+      
+      <!-- Neural Network Connections -->
+      <line x1="0" y1="0" x2="8" y2="8" stroke="url(#playGradient)" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="8" y2="0" stroke="url(#playGradient)" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="8" y2="-8" stroke="url(#playGradient)" stroke-width="1" opacity="0.5"/>
+      <line x1="8" y1="8" x2="16" y2="12" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+      <line x1="8" y1="8" x2="16" y2="4" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+      <line x1="8" y1="0" x2="16" y2="4" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+      <line x1="8" y1="0" x2="16" y2="-4" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+      <line x1="8" y1="-8" x2="16" y2="-4" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+      <line x1="8" y1="-8" x2="16" y2="-12" stroke="url(#playGradient)" stroke-width="1" opacity="0.4"/>
+    </g>
+  </g>
+  
+  <!-- Floating Data Particles -->
+  <circle cx="20" cy="90" r="2" fill="white" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="30" r="1.5" fill="white" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="100" r="1" fill="white" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Connection Lines -->
+  <line x1="32" y1="32" x2="70" y2="70" stroke="white" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+  <line x1="60" y1="40" x2="90" y2="80" stroke="white" stroke-width="1" opacity="0.2" stroke-dasharray="1,1"/>
+  
+  <!-- Glow Effect -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="white" stroke-width="1" opacity="0.1"/>
+</svg>

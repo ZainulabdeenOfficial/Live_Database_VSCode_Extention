@@ -1,0 +1,233 @@
+{
+  "name": "live-database-playground",
+  "displayName": "Live Database Playground",
+  "description": "🚀 Transform VS Code into a powerful database playground with AI-powered query generation, inline results, and multi-database support. Write natural language queries, execute them instantly, and explore your database schema with intelligent assistance.",
+  "version": "0.1.0",
+  "icon": "resources/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZainulabdeenOfficial/live-database-playground.git"
+  },
+  "publisher": "mzainulabideen",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "database",
+    "sql",
+    "mongodb",
+    "postgresql",
+    "mysql",
+    "sqlserver",
+    "ai",
+    "query",
+    "playground",
+    "intellisense",
+    "schema",
+    "results"
+  ],
+  "activationEvents": [
+    "onCommand:liveDB.connectDatabase",
+    "onCommand:liveDB.runQuery",
+    "onCommand:liveDB.generateQuery",
+    "onCommand:liveDB.showResults",
+    "onCommand:liveDB.showSchema",
+    "onLanguage:sql",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "liveDB.connectDatabase",
+        "title": "Live DB: Connect to Database",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.runQuery",
+        "title": "Live DB: Run Query",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.generateQuery",
+        "title": "Live DB: Generate Query from Comment",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.showResults",
+        "title": "Live DB: Show Results Panel",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.showSchema",
+        "title": "Live DB: Show Database Schema",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.saveConnection",
+        "title": "Live DB: Save Connection",
+        "category": "Live Database"
+      },
+      {
+        "command": "liveDB.loadConnection",
+        "title": "Live DB: Load Connection",
+        "category": "Live Database"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "liveDB.runQuery",
+        "key": "ctrl+shift+q",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "liveDB.generateQuery",
+        "key": "ctrl+shift+g",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "liveDB.showResults",
+        "key": "ctrl+shift+r",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "liveDB.runQuery",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "liveDB.generateQuery",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "liveDB.connectDatabase"
+        },
+        {
+          "command": "liveDB.runQuery"
+        },
+        {
+          "command": "liveDB.generateQuery"
+        },
+        {
+          "command": "liveDB.showResults"
+        },
+        {
+          "command": "liveDB.showSchema"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Live Database Playground",
+      "properties": {
+        "liveDB.defaultDatabase": {
+          "type": "string",
+          "default": "postgresql",
+          "enum": [
+            "postgresql",
+            "mysql",
+            "sqlserver",
+            "mongodb"
+          ],
+          "description": "Default database type for new connections"
+        },
+        "liveDB.aiProvider": {
+          "type": "string",
+          "default": "openai",
+          "enum": [
+            "openai",
+            "local"
+          ],
+          "description": "AI provider for query generation"
+        },
+        "liveDB.openaiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API key for AI query generation"
+        },
+        "liveDB.maxResults": {
+          "type": "number",
+          "default": 1000,
+          "description": "Maximum number of results to display"
+        },
+        "liveDB.autoConnect": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically connect to saved database on startup"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "liveDB",
+          "title": "Live Database",
+          "icon": "resources/database-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "liveDB": [
+        {
+          "id": "liveDB.connections",
+          "name": "Database Connections"
+        },
+        {
+          "id": "liveDB.results",
+          "name": "Query Results"
+        },
+        {
+          "id": "liveDB.schema",
+          "name": "Database Schema"
+        },
+        {
+          "id": "liveDB.history",
+          "name": "Query History"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/mssql": "^9.1.7",
+    "@types/node": "16.x",
+    "@types/pg": "^8.15.5",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.39.0",
+    "glob": "^10.2.6",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "knex": "^2.4.2",
+    "mongodb": "^5.7.0",
+    "mssql": "^9.1.1",
+    "mysql2": "^3.6.0",
+    "openai": "^4.0.0",
+    "pg": "^8.11.0",
+    "uuid": "^9.0.0"
+  }
+}
